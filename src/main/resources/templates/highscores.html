@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    #parse( "/templates/components/head.html" )
+    <link rel="stylesheet" type="text/css" href="/css/highscores.css">
+</head>
+<body>
+#parse( "/templates/components/navbar.html" )
+<div class="seperator"></div>
+<div class="d-flex justify-content-center"><h1>Leaderboard</h1></div>
+<div class="seperator"></div>
+
+
+<div class="container">
+<div class="row mx-auto col-lg-12 col-sm-12">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">User</th>
+                <th scope="col">Time</th>
+                <th scope="col">Strikes</th>
+                <th scope="col">Total score</th>
+            </tr>
+            </thead>
+            <tbody>
+            #foreach( $person in $scores )
+            <tr>
+                <th scope="row">$person.getNumber()</th>
+                <td>$person.getLogin()</td>
+                <td>$person.getTimeInMin():$person.getTimeInSecStr()</td>
+                <td>$person.getStrikes()</td>
+                <td>$person.getScore()</td>
+            </tr>
+            #end
+            </tbody>
+        </table>
+</div>
+</div>
+
+#parse( "/templates/components/scripts.html" )
+</body>
+</html>

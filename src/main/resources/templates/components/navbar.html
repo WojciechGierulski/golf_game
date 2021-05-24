@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light" id="navigation_bar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/game">Golf Game</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/game">Play game!</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/high-scores">High scores</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav ms-auto">
+
+                #if(!${user})
+
+                <li class="nav-item nav-link"><a class="btn btn-outline-primary wd" href="/login" role="button"> Log In </a></li>
+
+                <li class="nav-item nav-link"><a class="btn btn-outline-secondary" href="/create-acc" role="button"> Sign Up </a></li>
+                #else
+                <li class="nav-item nav-link"><a class="nav-link active"> Hello $user</a></li>
+
+                <li class="nav-item nav-link"><a class="btn btn-danger wd" href="/log-out" role="button">Log Out</a></li>
+                #end
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+#foreach( $message in $flashed_messages )
+<div class="alert alert-primary alert-dismissible fade show col-lg-4 col-md-4 col-sm-6 col-xs-6" role="alert">
+    $message
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+#end

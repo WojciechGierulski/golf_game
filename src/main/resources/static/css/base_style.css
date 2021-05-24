@@ -1,0 +1,19 @@
+.alert.alert-primary
+{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.input-group-text
+{
+	height: 110%;
+	text-align: center;
+}
+ul li a
+{
+    color: black;
+}
+a:hover i
+{
+	color: #1147b2;
+}

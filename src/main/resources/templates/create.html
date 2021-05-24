@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	#parse( "/templates/components/head.html" )
+	<link rel="stylesheet" type="text/css" href="/css/login/create_acc.css">
+</head>
+
+<body>
+	#parse( "/templates/components/navbar.html" )
+
+	<div class="container">
+		<form method="post" id="form1">
+	<div class="seperator"></div>
+		<div class="row mx-auto col-lg-4 col-md-6 col-sm-12">
+			<div class="input-group input-group-sm mb-3">
+				<span class="input-group-text" id="inputGroup-sizing-sm">Login</span>
+				<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="login" id="login_input_c">
+			</div>
+		</div>
+
+		<div class="row mx-auto col-lg-4 col-md-6 col-sm-12">
+			<div class="input-group input-group-sm mb-3">
+				<span class="input-group-text">Password</span>
+				<input type="password" class="form-control password_input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="password" id="password_input_c">
+			</div>
+		</div>
+
+		<div class="row mx-auto col-lg-4 col-md-6 col-sm-12">
+			<div class="input-group input-group-sm mb-3 col-lg-4 col-md-6 col-sm-12">
+				<span class="input-group-text">Confirm password</span>
+				<input type="password" class="form-control password_input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="c_password" id="c_password_input_c">
+			</div>
+		</div>
+
+		<div class="row mx-auto col-lg-4 col-md-6 col-sm-12">
+				<div class="form-check" style="padding-left: 2.2rem;">
+					<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+					<label class="form-check-label" for="flexCheckDefault">
+						Display password
+					</label>
+				</div>
+			</div>
+		<div class="row mx-auto button_ col-lg-4 col-md-6 col-sm-12">
+			<button type="submit" id="submit_bt" class="btn btn-success"> Create account! </button>
+		</div>
+		</form>
+	</div>
+
+	#parse( "/templates/components/scripts.html" )
+	<script src="/js/login/display_password.js"></script>
+</body>
+</html>

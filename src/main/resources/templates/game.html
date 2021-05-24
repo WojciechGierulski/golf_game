@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    #parse( "/templates/components/head.html" )
+    <link rel="stylesheet" type="text/css" href="/css/game_style.css">
+</head>
+<body>
+    #parse( "/templates/components/navbar.html" )
+
+    <div id="wrapper1">
+        <canvas id="canvas"></canvas>
+    </div>
+
+
+    #foreach($i in [1..19])
+    <div style="display: none;">
+        <img id="tile${i}" src="/images/tiles/${i}.png" alt="image">
+    </div>
+    #end
+
+
+    #parse( "/templates/components/scripts.html" )
+    <script type="module" src="/js/game/game_controlling/main_loop.js"></script>
+    <script src="https://frogcat.github.io/canvas-arrow/canvas-arrow.js"></script>
+</body>
+</html>
